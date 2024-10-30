@@ -1,0 +1,15 @@
+@keyframes pingpong {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Distância para cima */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.pingpong {
+    animation: pingpong 1s infinite alternate; /* Alterna entre os estados */
+}
