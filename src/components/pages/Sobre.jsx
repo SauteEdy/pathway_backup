@@ -1,11 +1,15 @@
+import { FaRegEye } from "react-icons/fa";
+import { IoMdHeartEmpty } from "react-icons/io";
+import { IoRocketOutline } from "react-icons/io5";
 import "../../Animations.css";
 import Logo from "../../assets/iconPeople.png";
+import Footer from "./Footer";
 
 export default function Sobre() {
   return (
     <div className="w-full h-[20%]">
-      <h1 className="font-bold font-custom text-center pt-24 text-5xl text-purple-900">
-        SOBRE NÓS
+      <h1 className="font-bold font-custom text-center pt-24 text-5xl text-orange-600 hover:text-purple-900 hover:cursor-pointer">
+        Sobre Nós
       </h1>
       <div className="w-[70%] h-[8] m-auto border-4  border-b-purple-900 mt-4"></div>
       <div className="w-full h-[40%] flex lg:flex-row mt-12">
@@ -40,6 +44,53 @@ export default function Sobre() {
           </p>
         </div>
       </div>
+      <div className="w-full h-auto flex flex-col md:flex-row mt-8 mb-8">
+        <div className="w-full md:w-[33%] h-auto flex flex-col items-center justify-center mb-8 md:mb-0">
+          <IoRocketOutline
+            style={{ fontSize: "10rem" }}
+            className="text-purple-900"
+          />
+          <h6 className="font-sans font-bold text-purple-900 pt-8 text-3xl">
+            Missão
+          </h6>
+          <p className="px-6 pt-8 text-center font-sans font-normal text-purple-800">
+            Nossa equipe utiliza uma abordagem estratégica e personalizada para
+            cada cliente, entendendo suas necessidades específicas e adaptando
+            nossas estratégias de prospecção para obter resultados eficientes.
+          </p>
+        </div>
+        <div className="w-full md:w-[33%] h-auto flex flex-col items-center justify-center mb-8 md:mb-0">
+          <IoMdHeartEmpty
+            style={{ fontSize: "10rem" }}
+            className="text-purple-900 mt-14"
+          />
+          <h6 className="font-sans font-bold text-purple-900 pt-8 text-3xl">
+            Valores
+          </h6>
+          <p className="px-6 pt-8 text-center font-sans font-normal text-purple-800">
+            Na Pathway, acreditamos na inovação constante, buscando soluções
+            disruptivas, excelência em cada interação e entrega, colaboração e
+            parceria como alicerces de nosso trabalho, flexibilidade e adaptação
+            para atender às necessidades em evolução, e um compromisso com um
+            impacto sustentável e positivo, sempre alinhado com nossa missão de
+            inspirar, motivar, inovar e transformar empresas e comunidades.
+          </p>
+        </div>
+        <div className="w-full md:w-[33%] h-auto flex flex-col items-center justify-center mb-8 md:mb-0">
+          <FaRegEye style={{ fontSize: "10rem" }} className="text-purple-900" />
+          <h6 className="font-sans font-bold text-purple-900 pt-8 text-3xl">
+            Visão
+          </h6>
+          <p className="px-6 pt-8 text-center font-sans font-normal text-purple-800">
+            Inspirar e impulsionar a excelência empresarial e ser reconhecidos
+            como líderes inovadores em consultoria, ao motivar equipas, inovar
+            processos e transformar empresas de modo sustentável e impactante,
+            actuando como parceiros estratégicos essenciais para o sucesso da
+            gestão estratégica de negócios e Recursos Humanos.
+          </p>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }

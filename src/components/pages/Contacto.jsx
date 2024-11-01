@@ -3,17 +3,19 @@ import { FaMapLocationDot } from "react-icons/fa6";
 import { IoIosGlobe } from "react-icons/io";
 import { RiMailSendFill } from "react-icons/ri";
 import Map from "../layout/contactoComponents/Map";
+import Footer from '../pages/Footer';
 
 export default function Contacto() {
     return (
         <div className="w-full h-screen">
-            <h1 className="font-bold text-purple-900 font-custom text-center text-2xl md:text-5xl pt-20">CONTACTE-NOS</h1>
+            <h1 className="font-bold text-orange-600 font-custom text-center text-2xl md:text-5xl pt-20 hover:text-purple-900 hover:cursor-pointer">Contacte-nos</h1>
+            <div className="w-[20%] h-[10px] border-b-4 border-orange-600 mt-4 mx-auto hover:text-purple-900 hover:cursor-pointer"></div>
             <p className="text-center text-purple-900 pt-8 px-4 text-1xl md:px-20 md:text-2xl">
                 Estamos aqui para ajudar! Se você tem dúvidas sobre nossos serviços de consultoria em Recursos Humanos ou deseja discutir como podemos apoiar sua empresa, não hesite em nos contatar.
             </p>
             <div className="w-[90%] h-auto flex flex-col lg:flex-row m-auto mt-8">
                 <div className="flex-1 flex flex-col bg-white shadow-lg mb-4 lg:mb-0">
-                    <h3 className="font-mono font-bold text-purple-900 pt-8 pl-6">Contacte-nos</h3>
+                    <h3 className="font-mono font-bold text-purple-900 pt-8 pl-6">Envie-nos uma mensagem</h3>
                     <div className="w-[90%] h-[100px] m-auto mt-4 flex flex-col md:flex-row justify-between">
                         <input type="text" name="name" className="w-[90%] h-[50px] mx-auto md:mx-0 md:w-[44%] outline-2 outline-purple-600 border-2 border-gray-400 pl-4 rounded" placeholder="Nome" />
                         <input type="email" name="email" className="w-[90%] h-[50px] mx-auto mt-4 md:mt-0 md:mx-0 md:w-[44%] outline-2 outline-purple-600 border-2 border-gray-400 pl-4 rounded" placeholder="Email" />
@@ -52,6 +54,7 @@ export default function Contacto() {
                     </p>
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 }
