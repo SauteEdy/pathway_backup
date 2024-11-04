@@ -3,6 +3,7 @@ import QuemSomos from '../layout/QuemSomos'
 import SlideScrol from '../layout/SlideScrol'
 import Testemunhos from '../layout/Testemunhos'
 import VagasComponent from '../layout/VagasComponent'
+import Footer from './Footer'
 import style from './Inicio.module.css'
 
 function Inicio() {
@@ -13,7 +14,7 @@ function Inicio() {
       <NossosServicos />
       <Testemunhos />
       <VagasComponent />
-
+      <Footer/>
     </div>
   )
 }

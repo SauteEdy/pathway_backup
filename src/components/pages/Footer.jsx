@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
     return (
-        <div className="w-full h-auto flex flex-col mt-4 mb-6">
+        <div className="w-full h-auto flex  flex-col mt-4 mb-6">
             <div className="w-full h-auto flex flex-col md:flex-row bg-orange-600 pb-4">
                 <div className="flex-1">
                     <p style={{ fontSize: '1.2rem' }} className="font-sans font-bold text-purple-900 text-1xl pl-8 pt-4">

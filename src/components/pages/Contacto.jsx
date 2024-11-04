@@ -5,7 +5,7 @@ import { FaMapLocationDot } from "react-icons/fa6";
 import { IoIosGlobe } from "react-icons/io";
 import { RiMailSendFill } from "react-icons/ri";
 import Map from "../layout/contactoComponents/Map";
-import Footer from "../pages/Footer";
+import Footer from './Footer';
 
 export default function Contacto() {
     const form = useRef();
@@ -57,11 +57,11 @@ export default function Contacto() {
             <textarea
               name="message"
               placeholder="Mensagem"
-              className="w-[90%] h-[150px] outline-2 outline-purple-600 border-2 border-gray-400 pl-4 mx-auto  mt-6 rounded pt-4 md:ml-6  md:mx-0 "
+              className="w-[90%] h-[150px] outline-2 outline-purple-600 border-2 border-gray-400 pl-4 mx-auto ml-4  mt-6 rounded pt-4 md:ml-6  md:mx-0 "
             ></textarea>
             <button
               type="submit"
-              className="mt-6 w-[80%] h-[40px] md:w-[130px] bg-purple-900 text-white font-bold font-sans ml-6 rounded mb-8"
+              className="mt-6 w-[100%] h-[40px] bg-purple-900 text-white font-bold font-sans  rounded mb-8 md:w-[130px] md:ml-6 "
             >
               Enviar
             </button>
@@ -98,7 +98,7 @@ export default function Contacto() {
           </p>
         </div>
       </div>
-      <Footer />
+      <Footer/>
     </div>
   );
 }

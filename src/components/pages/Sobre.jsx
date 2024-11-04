@@ -3,7 +3,7 @@ import { IoMdHeartEmpty } from "react-icons/io";
 import { IoRocketOutline } from "react-icons/io5";
 import "../../Animations.css";
 import Logo from "../../assets/iconPeople.png";
-import Footer from "./Footer";
+import Footer from '../pages/Footer';
 
 export default function Sobre() {
   return (
@@ -44,8 +44,8 @@ export default function Sobre() {
           </p>
         </div>
       </div>
-      <div className="w-full h-auto flex flex-col md:flex-row mt-8 mb-8">
-        <div className="w-full md:w-[33%] h-auto flex flex-col items-center justify-center mb-8 md:mb-0">
+      <div className="w-full h-auto flex flex-col mt-8 mb-8 md:flex-col md:items-center lg:flex-row ">
+        <div className="w-full h-auto flex flex-col items-center justify-center mb-8 md:w-[33%]  md:mb-0">
           <IoRocketOutline
             style={{ fontSize: "10rem" }}
             className="text-purple-900"
@@ -53,13 +53,13 @@ export default function Sobre() {
           <h6 className="font-sans font-bold text-purple-900 pt-8 text-3xl">
             Missão
           </h6>
-          <p className="px-6 pt-8 text-center font-sans font-normal text-purple-800">
+          <p className="px-6 pt-8 text-center font-sans font-normal text-purple-800 md:px-2 lg:px-6">
             Nossa equipe utiliza uma abordagem estratégica e personalizada para
             cada cliente, entendendo suas necessidades específicas e adaptando
             nossas estratégias de prospecção para obter resultados eficientes.
           </p>
         </div>
-        <div className="w-full md:w-[33%] h-auto flex flex-col items-center justify-center mb-8 md:mb-0">
+        <div className="w-full h-auto flex flex-col items-center justify-center mb-8  md:w-[33%] md:mb-0">
           <IoMdHeartEmpty
             style={{ fontSize: "10rem" }}
             className="text-purple-900 mt-14"
@@ -67,7 +67,7 @@ export default function Sobre() {
           <h6 className="font-sans font-bold text-purple-900 pt-8 text-3xl">
             Valores
           </h6>
-          <p className="px-6 pt-8 text-center font-sans font-normal text-purple-800">
+          <p className="px-6 pt-8 text-center font-sans font-normal text-purple-800 md:px-2 lg:px-6">
             Na Pathway, acreditamos na inovação constante, buscando soluções
             disruptivas, excelência em cada interação e entrega, colaboração e
             parceria como alicerces de nosso trabalho, flexibilidade e adaptação
@@ -76,12 +76,12 @@ export default function Sobre() {
             inspirar, motivar, inovar e transformar empresas e comunidades.
           </p>
         </div>
-        <div className="w-full md:w-[33%] h-auto flex flex-col items-center justify-center mb-8 md:mb-0">
+        <div className="w-full h-auto flex flex-col items-center justify-center mb-8 md:w-[33%]  md:mb-0">
           <FaRegEye style={{ fontSize: "10rem" }} className="text-purple-900" />
           <h6 className="font-sans font-bold text-purple-900 pt-8 text-3xl">
             Visão
           </h6>
-          <p className="px-6 pt-8 text-center font-sans font-normal text-purple-800">
+          <p className="px-6 pt-8 text-center font-sans font-normal text-purple-800 md:px-2 lg:px-6">
             Inspirar e impulsionar a excelência empresarial e ser reconhecidos
             como líderes inovadores em consultoria, ao motivar equipas, inovar
             processos e transformar empresas de modo sustentável e impactante,
@@ -90,7 +90,7 @@ export default function Sobre() {
           </p>
         </div>
       </div>
-      <Footer />
+      <Footer/>
     </div>
   );
 }

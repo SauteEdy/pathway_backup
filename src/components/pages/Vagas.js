@@ -1,5 +1,6 @@
 import SomeVagas from '../layout/SomeVagas'
 import VagasHeader from '../layout/VagasHeader'
+import Footer from '../pages/Footer'
 import style from './Vagas.module.css'
 
 function Vagas() {
@@ -8,7 +9,7 @@ function Vagas() {
       
       <VagasHeader />
       <SomeVagas />
-
+      <Footer/>
     </div>
   )
 }
