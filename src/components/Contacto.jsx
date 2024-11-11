@@ -29,9 +29,7 @@ export default function Contacto() {
       </h1>
       <div className="w-[20%] h-[10px] border-b-4 border-orange-600 mt-4 mx-auto hover:text-purple-900 hover:cursor-pointer"></div>
       <p className="text-center text-purple-900 pt-8 px-4 text-1xl md:px-20 md:text-2xl">
-        Estamos aqui para ajudar! Se você tem dúvidas sobre nossos serviços de
-        consultoria em Recursos Humanos ou deseja discutir como podemos apoiar
-        sua empresa, não hesite em nos contatar.
+      Estamos aqui para apoiar o crescimento da sua empresa! Descubra como as nossas soluções de consultoria em Recursos Humanos e gestão de negócios podem otimizar a sua equipa e impulsionar os seus resultados. Fale connosco e explore as melhores estratégias para o sucesso do seu negócio.
       </p>
       <div className="w-[90%] h-auto flex flex-col lg:flex-row m-auto mt-8">
         <div className="flex-1 flex flex-col bg-white shadow-lg mb-4 lg:mb-0">
