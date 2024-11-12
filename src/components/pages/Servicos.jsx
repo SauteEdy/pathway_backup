@@ -1,73 +1,68 @@
+import { useState } from "react";
 import { FaBookReader, FaBriefcase } from "react-icons/fa";
 import { FaArrowsDownToPeople, FaPeopleLine } from "react-icons/fa6";
-import { MdAssessment } from "react-icons/md";
+import { ImStatsBars } from "react-icons/im";
+import { MdManageAccounts, MdSource } from "react-icons/md";
 import { TbView360Number } from "react-icons/tb";
-import Card from "../layout/servicosComponents/Card";
+import styled from 'styled-components';
+import Card from '../layout/servicosComponents/Card';
+import Form from '../layout/servicosComponents/Form';
 import Footer from '../pages/Footer';
 
+
+const Breakpoints = {
+  mobile : '425px',
+  tablet : '768px',
+  laptop :'1024px'
+}
+
+
+const Wrapper = styled.div`
+    margin: 0 auto;
+    margin-top:50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap : wrap;
+    @media(min-width:${Breakpoints.mobile}){
+      flex-direction: column;
+      justify-items: center;
+      justify-content: center;
+      
+    };
+    @media(min-width : ${Breakpoints.tablet}){
+      flex-direction : row;
+      flex-wrap : wrap;
+      justify-content: center;
+      justify-items: center;
+    }
+`
+
+
 export default function Servicos() {
+  
+  const[isModalOpen, setModalOpen] = useState(false);
+
+  const toggleModal = () =>{
+    setModalOpen(!isModalOpen);
+  }
+
   return (
     <div className="w-full h-screen">
-      <h1 className="text-orange-600 font-bold text-5xl text-center pt-16 font-custom transition-transform transform hover:text-purple-900 hover:cursor-pointer">
-        Nossos Serviços
-      </h1>
-      <div className="w-[20%] h-[10px] border-b-4 border-orange-600 mt-4 mx-auto hover:text-purple-900 hover:cursor-pointer"></div>
-      <div className="w-full h-auto flex flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row lg:flex-wrap lg:justify-evenly">
-        <Card
-          icon={FaArrowsDownToPeople}
-          titulo={"Aquisição de Talentos"}
-          text={
-            "Na nossa abordagem de aquisição de talentos, entendemos que cada empresa possui necessidades únicas. Por isso, oferecemos um serviço completo e personalizado para identificar e atrair profissionais altamente qualificados, alinhados ao perfil desejado."
-          }
-          iconStyle={{ fontSize: "5rem", paddingTop: "2rem" }}
-          className="w-[80%] m-auto rounded-lg border-4 border-b-violet-800 flex flex-col justify-center items-center shadow-lg text-center mt-8 text-purple-900 hover:scale-105 hover:cursor-pointer transition-transform transform md:w-[90%] md:mx-4 lg:w-[28%]"
-        />
-        <Card
-          icon={FaPeopleLine}
-          titulo={"Mapeamento de Talentos"}
-          text={
-            "Nosso serviço de mapeamento de talentos visa identificar e analisar as habilidades e competências dos colaboradores da sua empresa. Realizamos um diagnóstico detalhado para compreender o potencial interno, ajudando a alinhar talentos com as necessidades estratégicas do negócio."
-          }
-          iconStyle={{ fontSize: "5rem", paddingTop: "2rem" }}
-          className="w-[80%] m-auto rounded-lg border-4 border-b-violet-800 flex flex-col justify-center items-center shadow-lg text-center mt-8 text-purple-900 hover:scale-105 hover:cursor-pointer transition-transform transform md:w-[90%] md:mx-4 lg:w-[28%]"
-        />
-        <Card
-          icon={TbView360Number}
-          titulo={"Referências 360°"}
-          text={
-            "Nosso serviço de levantamento de referências 360° oferece uma avaliação abrangente do desempenho e comportamento dos colaboradores. Coletamos feedback de colegas, supervisores e subordinados para proporcionar uma visão holística das competências."
-          }
-          iconStyle={{ fontSize: "5rem", paddingTop: "2rem" }}
-          className="w-[80%] m-auto rounded-lg border-4 border-b-violet-800 flex flex-col justify-center items-center shadow-lg text-center mt-8 text-purple-900 hover:scale-105 hover:cursor-pointer transition-transform transform md:w-[90%] md:mx-4 lg:w-[28%]"
-        />
-        <Card
-          icon={MdAssessment}
-          titulo={"Assessment de Talentos"}
-          text={
-            "Nosso serviço de assessment de talentos proporciona uma análise aprofundada das habilidades e competências dos colaboradores. Utilizamos ferramentas de avaliação modernas para medir o potencial, desempenho e adequação cultural dos profissionais dentro da sua organização."
-          }
-          iconStyle={{ fontSize: "5rem", paddingTop: "2rem" }}
-          className="w-[80%] m-auto rounded-lg border-4 border-b-violet-800 flex flex-col justify-center items-center shadow-lg text-center mt-8 text-purple-900 hover:scale-105 hover:cursor-pointer transition-transform transform md:w-[90%] md:mx-4 lg:w-[28%]"
-        />
-        <Card
-          icon={FaBookReader}
-          titulo={"Formação e Desenvolvimento"}
-          text={
-            "Nosso serviço de formação e desenvolvimento visa capacitar os colaboradores da sua empresa por meio de programas personalizados de aprendizagem. Oferecemos treinamentos práticos e teóricos que abordam competências técnicas e comportamentais."
-          }
-          iconStyle={{ fontSize: "5rem", paddingTop: "2rem" }}
-          className="w-[80%] m-auto rounded-lg border-4 border-b-violet-800 flex flex-col justify-center items-center shadow-lg text-center mt-8 text-purple-900 hover:scale-105 hover:cursor-pointer transition-transform transform md:w-[90%] md:mx-4 lg:w-[28%]"
-        />
-        <Card
-          icon={FaBriefcase}
-          titulo={"Auditoria RH"}
-          text={
-            "A auditoria de RH é essencial para avaliar e otimizar os processos e práticas de recursos humanos de uma empresa. Este serviço envolve uma análise detalhada das políticas, conformidade legal e gestão de talentos, permitindo a identificação de áreas de melhoria e oportunidades de eficiência."
-          }
-          iconStyle={{ fontSize: "5rem", paddingTop: "2rem" }}
-          className="w-[80%] m-auto rounded-lg border-4 border-b-violet-800 flex flex-col justify-center items-center shadow-lg text-center mt-8 text-purple-900 hover:scale-105 hover:cursor-pointer transition-transform transform md:w-[90%] md:mx-4 lg:w-[28%]"
-        />
-      </div>
+      <Wrapper className="w-[90%] h-auto">
+          <Card action={toggleModal}  iconStyle={{fontSize:'3rem'}} titulo="Aquisição de Talentos" icon={FaArrowsDownToPeople} text="Na nossa abordagem de aquisição de talentos, entendemos que cada empresa possui necessidades únicas. Por isso, oferecemos um serviço completo e personalizado para indentificar e atrair profissionais altamente qualificados, alinhados ao perfil desejado"  />
+          <Card action={toggleModal} iconStyle={{fontSize:'3rem'}} titulo="Mapeamento de Talentos" icon={FaPeopleLine} text="Nosso serviço de mapeamento de talentos visa identificar e analisar as habilidades e competências dos colaboradores da sua empresa. Realizamos um diagnóstico detalhado para compreender o potencial interno, ajudando a alinhar talentos com as necessidades estratégicas do negócio"  />
+          <Card action={toggleModal} iconStyle={{fontSize:'3rem'}} titulo="Refêrencias 360°" icon={TbView360Number} text="Oferecemos um serviço completo de verificação de referências profissionais e académicas para garantir que os candidatos recomendados atendem aos mais altos padrões de qualidade. Validamos o histórico dos candidatos com feedback direto das empresas anteriores e a autenticação dos certificados académicos junto das instituições de ensino. Com esta abordagem rigorosa, entregamos profissionais altamente qualificados e bem referenciados no mercado. "  />
+          <Card action={toggleModal} iconStyle={{fontSize:'3rem'}} titulo="Assessment de Talentos" icon={ImStatsBars} text="O nosso serviço de assessment de talentos oferece uma análise precisa e abrangente das competências e do potencial dos profissionais, utilizando ferramentas de avaliação modernas para medir a inteligência, a capacidade de aprendizagem, a retenção de informações, o raciocínio lógico, a velocidade perceptiva e os traços de personalidade. "  />
+          <Card action={toggleModal} iconStyle={{fontSize:'3rem'}} titulo="Formaçao e Desenvolvimento" icon={FaBookReader} text="Nosso serviço de formação e desenvolvimento visa capacitar os colaboradores da sua empresa por meio de programas personalizados de aprendizagem. Oferecemos treinamentos práticos e teóricos que abordam competências técnicas e comportamentais."  />
+          <Card action={toggleModal} iconStyle={{fontSize:'3rem'}} titulo="Auditoria RH" icon={FaBriefcase} text="A auditoria de RH é essencial para avaliar e otimizar os processos e práticas de recursos humanos de uma empresa. Este serviço envolve uma análise detalhada das políticas, conformidade legal e gestão de talentos permitindo a identificação de áreas de melhoria e oportunidades de eficiência."  />
+          <Card action={toggleModal} iconStyle={{fontSize:'3rem'}} titulo="Man Power" icon={MdManageAccounts} text="Os nossos serviços de manpower, call-off de talentos e outsourcing de RH oferecem soluções flexíveis e escaláveis, adaptadas às necessidades específicas da sua empresa. Se enfrenta períodos de maior demanda ou projetos temporários, fornecemos profissionais qualificados, prontos para integrar a sua equipa.       Com o manpower, conseguimos alocar rapidamente profissionais especializados, sem a sobrecarga dos processos de recrutamento.
+          "  />
+           <Card iconStyle={{fontSize:'3rem'}} titulo="OutSourcing de RH" icon={MdSource} text="O nosso serviço de outsourcing de RH garante uma gestão estratégica e integral de recursos humanos. Desde o recrutamento até à gestaaao contínua onde asseguramos a integração perfeita dos colaboradores na sua empresa, permitindo-lhe focar-se nos objectivos do seu negócio.
+          "  />
+          {isModalOpen && (
+              <Form onClick={toggleModal} action={toggleModal}></Form>
+          )}
+      </Wrapper>
       <Footer/>
     </div>
   );
